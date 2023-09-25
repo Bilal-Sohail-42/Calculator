@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(211, 207, 207);
+
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            /* border: 2px solid black; */
+        }
+
+        h1 {
+            text-align: center;
+            margin: 15px;
+            font-size: 40px;
+            text-shadow: 3px 6px 10px rgba(20, 20, 20, 0.5);
+
+
+        }
+
+        .input1 {
+            /* direction: rtl; */
+            /* writing-mode: rl; */
+            /* text-align: center; */
+            text-align: right;
+            width: 318px;
+            /* text-align: center; */
+            /* flex: 1; */
+            padding-right: 7px;
+            margin: auto;
+            height: 46px;
+            /* background-color: black; */
+            border: none;
+            background-color: rgb(195, 195, 195);
+            /* box-shadow: 5px 5px 5px white; */
+            /* border: 2px solid; */
+            /* color: white; */
+            font-size: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 40px rgba(255, 253, 253, 0.5);
+
+
+
+        }
+
+
+        .calcontainer {
+            width: 340px;
+            height: 500px;
+            /* border: 5px solid black; */
+            /* margin: auto; */
+            /* margin-top: 100px; */
+            border-radius: 25px;
+            background-color: rgb(205, 205, 205);
+            box-shadow: 0px 0px 40px rgb(255, 253, 253);
+        }
+
+        .b {
+            text-align: center;
+            height: 55px;
+            width: 70px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0px 0px 40px rgba(255, 253, 253, 0.5);
+       
+
+        }
+
+        .b:hover {
+            background-color: black;
+            color: white;
+            /* transition: 0.5s ease-in-out; */
+        }
+
+        .calrows {
+            margin-bottom: 6px;
+            display: flex;
+            /* border: 2px solid black; */
+            justify-content: space-evenly;
+            /* width: 340px; */
+            align-items: center;
+        }
+
+        #calrow2 {
+            margin-top: 26px;
+        }
+
+        .equal {
+            background-color: rgb(195, 195, 195);
+            /* color: white; */
+        }
+
+        .equal:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .lr {
+            width: 350px;
+            height: 500px;
+            /* border: 5px solid black; */
+            border-radius: 25px;
+            font-size: 22px;
+            text-align: justify;
+            margin: 20px 12px 20px 12px;
+
+
+        }
+        .left{
+            margin-bottom: 20px;
+        }
+        .right{
+            margin-top: 30px;
+              
+        }
+
+        /* .right {
+            width: 350px;
+            height: 500px;
+            border: 5px solid black;
+            border-radius: 25px;
+
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left lr">
+            <h1>Over-view</h1>
+            <p class="para">
+                A calculator is a vital tool for precise mathematical calculations, offering a user-friendly interface with various functions. It includes a numeric keypad, arithmetic operations, and a digital display screen. Whether in physical or digital form, calculators help with basic arithmetic and complex scientific tasks. They find applications in education, engineering, finance, and everyday life, simplifying numerical tasks. In essence, calculators are indispensable for efficient and accurate calculations.
+            </p>
+        </div>
+
+
+
+        <div class="calcontainer">
+            <h1>Calculator</h1>
+            <form action="">
+    
+    
+                <div class="calrows" id="calrow1">
+                    <input type="text" class="input1" name="calculator" value="">
+                </div>
+                <div class="calrows" id="calrow2">
+                    <input type="button" class="b" id="b2" value="AC" onclick="calculator.value =''">
+                    <input type="button" class="b" id="b2" value="DE"
+                        onclick="calculator.value =(calculator.value).toString().slice(0,-1)">
+                    <input type="button" class="b" id="b2" value="%" onclick="calculator.value +='%'">
+                    <input type="button" class="b" id="b2" value="&times;" onclick="calculator.value +='*'">
+                </div>
+                <div class="calrows" id="calrow3">
+                    <input type="button" class="b" id="b3" value="7" onclick="calculator.value +='7'">
+                    <input type="button" class="b" id="b3" value="8" onclick="calculator.value +='8'">
+                    <input type="button" class="b" id="b3" value="9" onclick="calculator.value +='9'">
+                    <input type="button" class="b" id="b3" value="+" onclick="calculator.value += '+'">
+                </div>
+                <div class="calrows" id="calrow4">
+                    <input type="button" class="b" id="b4" value="4" onclick="calculator.value +='4'">
+                    <input type="button" class="b" id="b4" value="5" onclick="calculator.value +='5'">
+                    <input type="button" class="b" id="b4" value="6" onclick="calculator.value +='6'">
+                    <input type="button" class="b" id="b4" value="&minus;" onclick="calculator.value +='-'">
+                </div>
+                <div class="calrows" id="calrow5">
+                    <input type="button" class="b" id="b5" value="1" onclick="calculator.value +='1'">
+                    <input type="button" class="b" id="b5" value="2" onclick="calculator.value +='2'">
+                    <input type="button" class="b" id="b5" value="3" onclick="calculator.value +='3'">
+                    <input type="button" class="b" id="b5" value="&divide;" onclick="calculator.value +='/'">
+                </div>
+                <div class="calrows" id="calrow6">
+                    <input type="button" class="b" id="b6" value="00" onclick="calculator.value +='00'">
+                    <input type="button" class="b" id="b6" value="0" onclick="calculator.value +='0'">
+                    <input type="button" class="b" id="b6" value="&#8226" onclick="calculator.value +='.'">
+                    <input type="button" class="equal b" id="b6" value="="
+                        onclick="calculator.value = eval(calculator.value)">
+                </div>
+            </form>
+        </div>
+
+        <div class="right lr">
+            <h1>Performance</h1>
+            <p class="para">
+                The provided HTML code creates a simple calculator interface with an input field and buttons for arithmetic operations and numbers. Users can perform basic calculations by clicking the numeric buttons and operators.  <br> <strong>The "AC" button: </strong> <br> The "AC" button:
+                clears the input, and<br> <strong>the "DE" button:</strong>  <br> the "DE" button:
+                 deletes the last character. Lastly, the "=" button calculates the expression using the eval function, providing a basic calculator functionality for users.
+            </p>
+        </div>
+    </div>    
+
+   
+</body>
+
+</html>
